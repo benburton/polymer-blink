@@ -1,0 +1,14 @@
+{
+  "name": "polymer-blink",
+  "version": "0.0.0",
+  "keywords": "seed, polymer, web-components",
+  "main": "polymer-blink.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.1"
+  },
+  "devDependencies": {
+    "polymer-test-tools": "Polymer/polymer-test-tools#master",
+    "mocha": "~1.14.0",
+    "sinon": "http://sinonjs.org/releases/sinon-1.10.2.js"
+  }
+}

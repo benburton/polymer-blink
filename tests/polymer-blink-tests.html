@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <title>polymer-blink</title>
+  <link rel="import" href="../../polymer-test-tools/tools.html">
+  <script src="../../platform/platform.js"></script>
+  <script src="../../polymer-test-tools/htmltest.js"></script>
+  <script src="../../sinon/index.js"></script>
+  <link rel="import" href="../polymer-blink.html">
+   
+</head>
+<body>
+  
+  <polymer-blink></polymer-blink>
+  
+  <script>
+    var clock = sinon.useFakeTimers();
+    document.addEventListener('polymer-ready', function() {
+      var element = document.querySelector('polymer-blink');
+      assert.equal(element.style.visibility, '');
+      clock.tick(250);
+      assert.equal(element.style.visibility, 'hidden');
+      clock.tick(250);
+      assert.equal(element.style.visibility, 'visible');
+      clock.restore();
+      done();
+    });
+  </script>
+</body>
+</html>

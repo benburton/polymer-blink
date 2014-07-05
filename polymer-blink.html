@@ -1,0 +1,19 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<polymer-element name="polymer-blink" attributes="notitle">
+  <template>
+    <content></content>
+  </template>
+
+  <script>
+    Polymer('polymer-blink', {
+      domReady: function() {
+        var self = this;
+        setInterval(function() {
+          self.style.visibility = (self.style.visibility === 'hidden') ? 'visible' : 'hidden';
+        }, 250);
+      }
+    });
+  </script>
+
+</polymer-element>
